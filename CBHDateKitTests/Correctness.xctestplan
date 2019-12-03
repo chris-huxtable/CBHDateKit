@@ -1,0 +1,54 @@
+{
+  "configurations" : [
+    {
+      "id" : "71F98759-E1C2-485D-AD52-F33A4BE4F57B",
+      "name" : "Behavior",
+      "options" : {
+        "addressSanitizer" : {
+          "detectStackUseAfterReturn" : true,
+          "enabled" : true
+        },
+        "mallocScribbleEnabled" : true,
+        "nsZombieEnabled" : true,
+        "testExecutionOrdering" : "random",
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    },
+    {
+      "id" : "81F077B3-2879-468F-B89C-26129965076F",
+      "name" : "Threading",
+      "options" : {
+        "testExecutionOrdering" : "random",
+        "threadSanitizerEnabled" : true,
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    },
+    {
+      "id" : "0CE3CAEC-8BE7-48D6-AA52-E693C01DADD4",
+      "name" : "Memory",
+      "options" : {
+        "guardMallocEnabled" : true,
+        "mallocGuardEdgesEnabled" : true,
+        "mallocStackLoggingOptions" : {
+          "loggingType" : "allAllocations"
+        },
+        "testExecutionOrdering" : "random",
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CBHDateKit.xcodeproj",
+        "identifier" : "83E09DFE23956E66003B95B9",
+        "name" : "CBHDateKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
