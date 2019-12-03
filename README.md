@@ -8,7 +8,7 @@
 `CBHDateKit` builds on the existing `NSDate` API adding a number of comfort features including relative date creation, numerous common checks, and convenient methods for decomposing dates. Additionally the `NSDateFormatter` API is extended to provide convenient factories as well as some pre-built factories for RFC 822 and RFC 3339.
 
 
-## `NSDate (CBHDateKit)`
+## `NSDate`
 
 ```objective-c
 
@@ -118,7 +118,7 @@
 @property (nonatomic, readonly) NSInteger year;
 ```
 
-## `NSDateFormatter (CBHDateKit)`
+## `NSDateFormatter`
 ```objective-c
 #pragma mark - Factories
 
