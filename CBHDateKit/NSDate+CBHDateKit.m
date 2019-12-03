@@ -290,22 +290,22 @@
 
 - (NSInteger)minutesAfterDate:(NSDate *)date
 {
-	return (NSInteger) ([self timeIntervalSinceDate:date] / D_MINUTE);
+	return (NSInteger)([self timeIntervalSinceDate:date] / D_MINUTE);
 }
 
 - (NSInteger)minutesBeforeDate:(NSDate *)date
 {
-	return (NSInteger) ([date timeIntervalSinceDate:self] / D_MINUTE);
+	return (NSInteger)([date timeIntervalSinceDate:self] / D_MINUTE);
 }
 
 - (NSInteger)hoursAfterDate:(NSDate *)date
 {
-	return (NSInteger) ([self timeIntervalSinceDate:date] / D_HOUR);
+	return (NSInteger)([self timeIntervalSinceDate:date] / D_HOUR);
 }
 
 - (NSInteger)hoursBeforeDate:(NSDate *)date
 {
-	return (NSInteger) ([date timeIntervalSinceDate:self] / D_HOUR);
+	return (NSInteger)([date timeIntervalSinceDate:self] / D_HOUR);
 }
 
 - (NSInteger)daysAfterDate:(NSDate *)date
