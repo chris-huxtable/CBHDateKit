@@ -24,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (CBHDateKit)
 
-
 #pragma mark - Shared Calendar
 
 + (NSCalendar *)sharedCalendar;
@@ -51,34 +50,34 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isEqualToDateIgnoringNanoSeconds:(NSDate *)date;
 
 - (BOOL)isSameDayAsDate:(NSDate *)date;
-- (BOOL)isToday;
-- (BOOL)isTomorrow;
-- (BOOL)isYesterday;
+@property (nonatomic, readonly) BOOL isToday;
+@property (nonatomic, readonly) BOOL isTomorrow;
+@property (nonatomic, readonly) BOOL isYesterday;
 
 - (BOOL)isSameWeekAsDate:(NSDate *)date;
-- (BOOL)isThisWeek;
-- (BOOL)isNextWeek;
-- (BOOL)isLastWeek;
+@property (nonatomic, readonly) BOOL isThisWeek;
+@property (nonatomic, readonly) BOOL isNextWeek;
+@property (nonatomic, readonly) BOOL isLastWeek;
 
 - (BOOL)isSameMonthAsDate:(NSDate *)date;
-- (BOOL)isThisMonth;
+@property (nonatomic, readonly) BOOL isThisMonth;
 
 - (BOOL)isSameYearAsDate:(NSDate *)date;
-- (BOOL)isThisYear;
-- (BOOL)isNextYear;
-- (BOOL)isLastYear;
+@property (nonatomic, readonly) BOOL isThisYear;
+@property (nonatomic, readonly) BOOL isNextYear;
+@property (nonatomic, readonly) BOOL isLastYear;
 
 - (BOOL)isEarlierThanDate:(NSDate *)date;
 - (BOOL)isLaterThanDate:(NSDate *)date;
 
-- (BOOL)isInTheFuture;
-- (BOOL)isInThePast;
+@property (nonatomic, readonly) BOOL isInTheFuture;
+@property (nonatomic, readonly) BOOL isInThePast;
 
 
 #pragma mark - Date Roles
 
-- (BOOL)isWorkday;
-- (BOOL)isWeekend;
+@property (nonatomic, readonly) BOOL isWorkday;
+@property (nonatomic, readonly) BOOL isWeekend;
 
 
 #pragma mark - Adjusting Dates
@@ -92,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSDate *)dateByAddingDays:(NSInteger)days;
 - (NSDate *)dateBySubtractingDays:(NSInteger)days;
 
-- (NSDate *)dateAtStartOfDay;
+@property (nonatomic, readonly) NSDate *dateAtStartOfDay;
 
 
 #pragma mark - Intervals

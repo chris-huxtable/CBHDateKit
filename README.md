@@ -11,7 +11,6 @@
 ## `NSDate`
 
 ```objective-c
-
 #pragma mark - Shared Calendar
 
 + (NSCalendar *)sharedCalendar;
@@ -22,12 +21,14 @@
 + (instancetype)dateTomorrow;
 + (instancetype)dateYesterday;
 
-+ (instancetype)dateWithDaysFromNow:(NSInteger)days;
-+ (instancetype)dateWithDaysBeforeNow:(NSInteger)days;
-+ (instancetype)dateWithHoursFromNow:(NSInteger)hours;
-+ (instancetype)dateWithHoursBeforeNow:(NSInteger)hours;
 + (instancetype)dateWithMinutesFromNow:(NSInteger)minutes;
 + (instancetype)dateWithMinutesBeforeNow:(NSInteger)minutes;
+
++ (instancetype)dateWithHoursFromNow:(NSInteger)hours;
++ (instancetype)dateWithHoursBeforeNow:(NSInteger)hours;
+
++ (instancetype)dateWithDaysFromNow:(NSInteger)days;
++ (instancetype)dateWithDaysBeforeNow:(NSInteger)days;
 
 
 #pragma mark - Comparing Dates
@@ -36,45 +37,48 @@
 - (BOOL)isEqualToDateIgnoringNanoSeconds:(NSDate *)date;
 
 - (BOOL)isSameDayAsDate:(NSDate *)date;
-- (BOOL)isToday;
-- (BOOL)isTomorrow;
-- (BOOL)isYesterday;
+@property (nonatomic, readonly) BOOL isToday;
+@property (nonatomic, readonly) BOOL isTomorrow;
+@property (nonatomic, readonly) BOOL isYesterday;
 
 - (BOOL)isSameWeekAsDate:(NSDate *)date;
-- (BOOL)isThisWeek;
-- (BOOL)isNextWeek;
-- (BOOL)isLastWeek;
+@property (nonatomic, readonly) BOOL isThisWeek;
+@property (nonatomic, readonly) BOOL isNextWeek;
+@property (nonatomic, readonly) BOOL isLastWeek;
 
 - (BOOL)isSameMonthAsDate:(NSDate *)date;
-- (BOOL)isThisMonth;
+@property (nonatomic, readonly) BOOL isThisMonth;
 
 - (BOOL)isSameYearAsDate:(NSDate *)date;
-- (BOOL)isThisYear;
-- (BOOL)isNextYear;
-- (BOOL)isLastYear;
+@property (nonatomic, readonly) BOOL isThisYear;
+@property (nonatomic, readonly) BOOL isNextYear;
+@property (nonatomic, readonly) BOOL isLastYear;
 
 - (BOOL)isEarlierThanDate:(NSDate *)date;
 - (BOOL)isLaterThanDate:(NSDate *)date;
 
-- (BOOL)isInTheFuture;
-- (BOOL)isInThePast;
+@property (nonatomic, readonly) BOOL isInTheFuture;
+@property (nonatomic, readonly) BOOL isInThePast;
 
 
 #pragma mark - Date Roles
 
-- (BOOL)isWeekday;
-- (BOOL)isWeekend;
+@property (nonatomic, readonly) BOOL isWorkday;
+@property (nonatomic, readonly) BOOL isWeekend;
 
 
 #pragma mark - Adjusting Dates
 
-- (NSDate *)dateByAddingDays:(NSInteger)days;
-- (NSDate *)dateBySubtractingDays:(NSInteger)days;
-- (NSDate *)dateByAddingHours:(NSInteger)hours;
-- (NSDate *)dateBySubtractingHours:(NSInteger)hours;
 - (NSDate *)dateByAddingMinutes:(NSInteger)minutes;
 - (NSDate *)dateBySubtractingMinutes:(NSInteger)minutes;
-- (NSDate *)dateAtStartOfDay;
+
+- (NSDate *)dateByAddingHours:(NSInteger)hours;
+- (NSDate *)dateBySubtractingHours:(NSInteger)hours;
+
+- (NSDate *)dateByAddingDays:(NSInteger)days;
+- (NSDate *)dateBySubtractingDays:(NSInteger)days;
+
+@property (nonatomic, readonly) NSDate *dateAtStartOfDay;
 
 
 #pragma mark - Intervals
