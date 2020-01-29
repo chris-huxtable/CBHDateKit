@@ -20,14 +20,15 @@
 
 @import Foundation;
 
+
 #define TIME_COMPONENTS (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitNanosecond)
 #define DATE_COMPONENTS (NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal)
 
-#define D_MINUTE	(NSInteger)60
-#define D_HOUR		(NSInteger)3600
-#define D_DAY		(NSInteger)86400
-#define D_WEEK		(NSInteger)604800
-#define D_YEAR		(NSInteger)31556926
+#define D_MINUTE (NSInteger)60
+#define D_HOUR   (NSInteger)3600
+#define D_DAY    (NSInteger)86400
+#define D_WEEK   (NSInteger)604800
+#define D_YEAR   (NSInteger)31556926
 
 
 @implementation NSDate (CBHDateKit)
@@ -112,6 +113,8 @@
 }
 
 
+#pragma mark Comparing Days
+
 - (BOOL)isSameDayAsDate:(NSDate *)date
 {
 	return [self isEqualToDateIgnoringTime:date];
@@ -131,6 +134,9 @@
 {
 	return [self isEqualToDateIgnoringTime:[NSDate dateYesterday]];
 }
+
+
+#pragma mark Comparing Weeks
 
 - (BOOL)isSameWeekAsDate:(NSDate *)date
 {
@@ -157,6 +163,9 @@
 	return [self isSameWeekAsDate:[NSDate dateWithTimeIntervalSinceReferenceDate:interval]];
 }
 
+
+#pragma mark Comparing Months
+
 - (BOOL)isSameMonthAsDate:(NSDate *)date
 {
 	NSCalendar *calendar = [NSDate sharedCalendar];
@@ -170,6 +179,9 @@
 {
 	return [self isSameMonthAsDate:[NSDate date]];
 }
+
+
+#pragma mark Comparing Years
 
 - (BOOL)isSameYearAsDate:(NSDate *)date
 {
@@ -190,6 +202,9 @@
 {
 	return ([self year] == ([[NSDate date] year] - 1));
 }
+
+
+#pragma mark Before and After
 
 - (BOOL)isEarlierThanDate:(NSDate *)date
 {
