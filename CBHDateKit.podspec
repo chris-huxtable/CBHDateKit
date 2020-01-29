@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                   = 'CBHDateKit'
-  spec.version                = '1.0.1'
+  spec.version                = '1.0.2'
   spec.module_name            = 'CBHDateKit'
 
   spec.summary                = 'Adds comfort features to NSDate and NSDateFormatter.'
