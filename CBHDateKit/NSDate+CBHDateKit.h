@@ -220,13 +220,53 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Adjusting Dates
 
+/** Returns a new date the given number of minutes after the receiver.
+ *
+ * @param minutes   The number of minutes to add.
+ *
+ * @return          The new date.
+ */
 - (NSDate *)dateByAddingMinutes:(NSInteger)minutes;
+
+/** Returns a new date the given number of minutes before the receiver.
+ *
+ * @param minutes   The number of minutes to subtract.
+ *
+ * @return          The new date.
+ */
 - (NSDate *)dateBySubtractingMinutes:(NSInteger)minutes;
 
+/** Returns a new date the given number of hours after the receiver.
+ *
+ * @param hours     The number of hours to add.
+ *
+ * @return          The new date.
+ */
 - (NSDate *)dateByAddingHours:(NSInteger)hours;
+
+/** Returns a new date the given number of hours before the receiver.
+ *
+ * @param hours     The number of hours to subtract.
+ *
+ * @return          The new date.
+ */
 - (NSDate *)dateBySubtractingHours:(NSInteger)hours;
 
+
+/** Returns a new date the given number of days after the receiver.
+ *
+ * @param days      The number of days to add.
+ *
+ * @return          The new date.
+ */
 - (NSDate *)dateByAddingDays:(NSInteger)days;
+
+/** Returns a new date the given number of days before the receiver.
+ *
+ * @param days      The number of days to subtract.
+ *
+ * @return          The new date.
+ */
 - (NSDate *)dateBySubtractingDays:(NSInteger)days;
 
 
@@ -236,19 +276,88 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Intervals
 
+/** Returns the number of whole seconds the receiver is after the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole seconds the receiver is after the given date.
+ */
 - (NSInteger)secondsAfterDate:(NSDate *)date;
+
+/** Returns the number of whole seconds the receiver is before the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole seconds the receiver is before the given date.
+ */
 - (NSInteger)secondsBeforeDate:(NSDate *)date;
 
+
+/** Returns the number of whole minutes the receiver is after the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole minutes the receiver is after the given date.
+ */
 - (NSInteger)minutesAfterDate:(NSDate *)date;
+
+/** Returns the number of whole minutes the receiver is before the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole minutes the receiver is before the given date.
+ */
 - (NSInteger)minutesBeforeDate:(NSDate *)date;
 
+
+/** Returns the number of whole hours the receiver is after the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole hours the receiver is after the given date.
+ */
 - (NSInteger)hoursAfterDate:(NSDate *)date;
+
+/** Returns the number of whole hours the receiver is before the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole hours the receiver is before the given date.
+ */
 - (NSInteger)hoursBeforeDate:(NSDate *)date;
 
+
+/** Returns the number of whole days the receiver is after the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole days the receiver is after the given date.
+ */
 - (NSInteger)daysAfterDate:(NSDate *)date;
+
+/** Returns the number of whole days the receiver is before the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole days the receiver is before the given date.
+ */
 - (NSInteger)daysBeforeDate:(NSDate *)date;
 
+
+/** Returns the number of whole years the receiver is after the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole years the receiver is after the given date.
+ */
 - (NSInteger)yearsAfterDate:(NSDate *)date;
+
+/** Returns the number of whole days the receiver is before the given date.
+ *
+ * @param date  The date to compare to.
+ *
+ * @return      The number of whole years the receiver is before the given date.
+ */
 - (NSInteger)yearsBeforeDate:(NSDate *)date;
 
 
